@@ -1,5 +1,5 @@
 #google code jam
-#store credit problem
+#reservse words problem
 #https://code.google.com/codejam/contest/351101/dashboard#s=p1
 
 import re
