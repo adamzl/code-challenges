@@ -85,7 +85,6 @@ def method2(inputFile, outputFile):
 		matches = re.findall(regex, dictionary)
 		outputFile.write('Case #{}: {}\n'.format(case+1, len(matches)))
 		print('Case #{}: {}'.format(case+1, len(matches)))
-
 if __name__ == '__main__':
 	input = open(r'c:\users\adam\desktop\input.txt', 'r')
 	output = open(r'c:\users\adam\desktop\output.txt', 'w')
