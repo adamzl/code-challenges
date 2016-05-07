@@ -1,2 +1,11 @@
+*.sln
+*.db
+*.vcxproj
+*.filters
+*.opendb
+cpp-code-challenges/Debug
+cpp-code-challenges/.vs
+
 *.pyc
+
 *.json
