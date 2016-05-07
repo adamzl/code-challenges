@@ -1,6 +1,7 @@
 #include <iostream>
 #include "reverseWords.h"
 #include "storeCredit.h"
+#include "spelling.h"
 
 using namespace std;
 
@@ -12,7 +13,8 @@ int main(int argc, char** argv)
 		string const outputFilename = "c:\\users\\adam\\desktop\\output.txt";
 
 		//googleCodeJamProblem* problem = new reverseWords();
-		googleCodeJamProblem* problem = new storeCredit();
+		//googleCodeJamProblem* problem = new storeCredit();
+		googleCodeJamProblem* problem = new spelling();
 
 		problem->openFiles(&inputFilename, &outputFilename);
 		problem->execute();
