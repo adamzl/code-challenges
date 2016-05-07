@@ -2,6 +2,7 @@
 #include <iostream>
 #include <fstream>
 #include <regex>
+#include <list>
 #include "azlException.h"
 
 class googleCodeJamProblem
@@ -14,9 +15,12 @@ public:
 protected:
 	googleCodeJamProblem();
 	void outputLine(std::string const * outputString);
-	int const readCaseCount();
+	
 	void const readLine();
-	char getLineBuffer[1000];
+	int const readSingleInt();
+	void const readManyInt(std::list<int>& outputList);
+
+	char getLineBuffer[10000];
 	std::string* getLineString;
 
 private:

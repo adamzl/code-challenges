@@ -36,10 +36,25 @@ void googleCodeJamProblem::outputLine(std::string const * outputString)
 	outputFileHandle.write("\n", 1);
 }
 
-int const googleCodeJamProblem::readCaseCount()
+int const googleCodeJamProblem::readSingleInt()
 {
 	inputFileHandle.getline(getLineBuffer, sizeof getLineBuffer);
 	return atoi(getLineBuffer);
+}
+
+void const googleCodeJamProblem::readManyInt(list<int>& outputList)
+{
+	outputList.clear();
+	readLine();
+
+	regex wordPattern("\\d+");
+	sregex_iterator iterator = sregex_iterator(getLineString->begin(), getLineString->end(), wordPattern);
+	sregex_iterator iteratorDone = sregex_iterator();
+	for (; iterator != iteratorDone; iterator++)
+	{
+		int number = stoi(iterator->str());
+		outputList.push_back(number);
+	}
 }
 
 void const googleCodeJamProblem::readLine()

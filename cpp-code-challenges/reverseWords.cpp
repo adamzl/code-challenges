@@ -13,7 +13,7 @@ reverseWords::~reverseWords()
 
 void reverseWords::execute()
 {
-	int const caseCount = readCaseCount();
+	int const caseCount = readSingleInt();
 
 	regex wordPattern("[^\\s]+");
 	string output;
@@ -26,9 +26,9 @@ void reverseWords::execute()
 		sregex_iterator iterator = sregex_iterator(getLineString->begin(), getLineString->end(), wordPattern);
 		sregex_iterator iteratorDone = sregex_iterator();
 		stack<string> wordStack;
-		for (sregex_iterator i = iterator; i != iteratorDone; ++i)
+		for (; iterator != iteratorDone; iterator++)
 		{
-			wordStack.push(i->str());
+			wordStack.push(iterator->str());
 		}
 		while (!wordStack.empty())
 		{
