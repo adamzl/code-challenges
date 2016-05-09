@@ -1,7 +1,7 @@
 #pragma once
-#include "googleCodeJamProblem.h"
+#include "problem.h"
 
-class reverseWords : public googleCodeJamProblem
+class reverseWords : public problem
 {
 public:
 	reverseWords();

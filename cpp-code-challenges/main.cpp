@@ -12,9 +12,9 @@ int main(int argc, char** argv)
 		string const inputFilename = "c:\\users\\adam\\desktop\\input.txt";
 		string const outputFilename = "c:\\users\\adam\\desktop\\output.txt";
 
-		//googleCodeJamProblem* problem = new reverseWords();
-		//googleCodeJamProblem* problem = new storeCredit();
-		googleCodeJamProblem* problem = new spelling();
+		//problem* problem = new reverseWords();
+		//problem* problem = new storeCredit();
+		problem* problem = new spelling();
 
 		problem->openFiles(&inputFilename, &outputFilename);
 		problem->execute();

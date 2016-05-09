@@ -5,15 +5,15 @@
 #include <list>
 #include "azlException.h"
 
-class googleCodeJamProblem
+class problem
 {
 public:
 	void openFiles(std::string const * inputFilename, std::string const * outputFilename);
 	virtual void execute() = 0;
-	virtual ~googleCodeJamProblem();
+	virtual ~problem();
 
 protected:
-	googleCodeJamProblem();
+	problem();
 	void outputLine(std::string const * outputString);
 	
 	void const readLine();

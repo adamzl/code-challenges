@@ -1,6 +1,6 @@
 #pragma once
-#include "googleCodeJamProblem.h"
-class spelling : public googleCodeJamProblem
+#include "problem.h"
+class spelling : public problem
 {
 public:
 	spelling();

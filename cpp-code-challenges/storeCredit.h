@@ -1,7 +1,7 @@
 #pragma once
-#include "googleCodeJamProblem.h"
+#include "problem.h"
 class storeCredit :
-	public googleCodeJamProblem
+	public problem
 {
 public:
 	storeCredit();

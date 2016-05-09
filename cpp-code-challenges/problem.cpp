@@ -1,20 +1,20 @@
-#include "googleCodeJamProblem.h"
+#include "problem.h"
 
 using namespace std;
 
-googleCodeJamProblem::googleCodeJamProblem()
+problem::problem()
 {
 	getLineString = NULL;
 }
 
-googleCodeJamProblem::~googleCodeJamProblem()
+problem::~problem()
 {
 	inputFileHandle.close();
 	outputFileHandle.close();
 	if (getLineString) { delete getLineString; }
 }
 
-void googleCodeJamProblem::openFiles(string const * inputFilename, string const * outputFilename)
+void problem::openFiles(string const * inputFilename, string const * outputFilename)
 {
 	inputFileHandle.open(*inputFilename);
 	outputFileHandle.open(*outputFilename);
@@ -24,7 +24,7 @@ void googleCodeJamProblem::openFiles(string const * inputFilename, string const 
 	}
 }
 
-void googleCodeJamProblem::outputLine(std::string const * outputString)
+void problem::outputLine(std::string const * outputString)
 {
 	if (!outputFileHandle.is_open())
 	{
@@ -36,13 +36,13 @@ void googleCodeJamProblem::outputLine(std::string const * outputString)
 	outputFileHandle.write("\n", 1);
 }
 
-int const googleCodeJamProblem::readSingleInt()
+int const problem::readSingleInt()
 {
 	inputFileHandle.getline(getLineBuffer, sizeof getLineBuffer);
 	return atoi(getLineBuffer);
 }
 
-void const googleCodeJamProblem::readManyInt(list<int>& outputList)
+void const problem::readManyInt(list<int>& outputList)
 {
 	outputList.clear();
 	readLine();
@@ -57,7 +57,7 @@ void const googleCodeJamProblem::readManyInt(list<int>& outputList)
 	}
 }
 
-void const googleCodeJamProblem::readLine()
+void const problem::readLine()
 {
 	inputFileHandle.getline(getLineBuffer, sizeof getLineBuffer);
 	for (int index = 0; index < sizeof getLineBuffer; index++)
